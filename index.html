@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Simple To Do List</title>
+    </head>
+    <body>
+        <h1>Simple To Do List</h1>
+        <input id='task' type='text' placeholder='Add your task'>
+        <button onclick='addItem()'> Add</button>
+        <ul id='items'>
+            <li>Sholat</li>
+            <li>Makan</li>
+            <li>Minum</li>
+            <li>ngePUBG</li>
+            <li>Tidur</li>
+        </ul>
+        <script>
+            function addItem() {
+                let items = document.getElementById('items');
+                let itemvalue = document.getElementById('task').value;
+                let li = document.createElement('li');
+                li.innerHTML = itemvalue;
+                items.appendChild(li);
+                document.getElementById('task').value = '';
+            }
+        </script>
+    </body>
+</html>
